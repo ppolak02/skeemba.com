@@ -1,6 +1,4 @@
-// SETUP: Change this to the email address where you want enquiries sent.
-// This static demo opens the visitor's email app; it does not silently transmit data.
-const CONTACT_EMAIL = 'hello@example.com';
+const CONTACT_EMAIL = 'skeemba@skeemba.com';
 
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.site-nav');
@@ -25,10 +23,7 @@ document.getElementById('contact-form').addEventListener('submit', (event) => {
     status.textContent = 'Please complete all required fields.';
     return;
   }
-  if (CONTACT_EMAIL === 'hello@example.com') {
-    status.textContent = 'Site owner: set CONTACT_EMAIL in script.js before using this form.';
-    return;
-  }
+
   const name = form.elements.name.value.trim();
   const email = form.elements.email.value.trim();
   const subject = form.elements.subject.value;
